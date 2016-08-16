@@ -10,11 +10,11 @@ import { IrdataService }       from './irdata.service';
         <h1>Tour of Heroes ()</h1>
         <h3>Heroes:</h3>
         <ul>
-            <li *ngFor="let data of showList();">
+            <md-card *ngFor="let data of showList();">
                 {{data.name}}
                 {{data.detail}}
-                {{data.data}}
-            </li>
+                {{data.data}}<br />
+            </md-card>
         </ul>
         
         New hero name:
