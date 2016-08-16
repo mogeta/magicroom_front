@@ -1,20 +1,19 @@
-/// <reference path="../typings/index.d.ts"/>
+import { Component } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES, RouterConfig} from '@angular/router';
 import {Hello} from './app/hello';
 
 @Component({
   selector: 'root',
   template: '<router-outlet></router-outlet>',
-  directives: [ROUTER_DIRECTIVES]
 })
 export class Root {
 }
 
-export const routes: RouterConfig = [
+const appRoutes: Routes = [
   {
     path: '',
     component: Hello
   }
 ];
+export const routing = RouterModule.forRoot(appRoutes);
