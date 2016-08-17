@@ -7,21 +7,18 @@ import { IrdataService }       from './irdata.service';
     selector: 'irdata-list',
     providers: [HTTP_PROVIDERS,IrdataService,Irdata], 
     template: `
-        <h1>Tour of Heroes ()</h1>
-        <h3>Heroes:</h3>
-        <ul>
-            <md-card *ngFor="let data of showList();">
-                {{data.name}}
-                {{data.detail}}
-                {{data.data}}<br />
-            </md-card>
-        </ul>
-        
+        <md-card *ngFor="let data of showList();">
+            {{data.name}}
+            {{data.detail}}
+            {{data.data}}<br />
+        </md-card>
+        <!--
         New hero name:
         <input #newHeroName />
         <button (click)="showList();">
             Add Hero
         </button>
+        -->
         <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
     `
 })
